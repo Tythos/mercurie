@@ -1,5 +1,7 @@
-.terraform
-terraform.tfvars
+.terraform/
 .terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfvars
 terraform.tfstate
 terraform.tfstate.backup
+kubeconfig.yaml

@@ -5,3 +5,8 @@ module "doproject" {
   DO_NODE_COUNT  = var.DO_NODE_COUNT
   DO_NODE_SIZE   = var.DO_NODE_SIZE
 }
+
+module "icnamespace" {
+  source    = "./icnamespace"
+  HOST_NAME = var.HOST_NAME
+}

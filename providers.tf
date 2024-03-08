@@ -22,7 +22,15 @@ provider "digitalocean" {
 }
 
 provider "kubernetes" {
+  host                   = module.doproject.CLUSTER_HOST
+  token                  = module.doproject.CLUSTER_TOKEN
+  cluster_ca_certificate = module.doproject.CLUSTER_CA
 }
 
 provider "helm" {
+  kubernetes {
+    host                   = module.doproject.CLUSTER_HOST
+    token                  = module.doproject.CLUSTER_TOKEN
+    cluster_ca_certificate = module.doproject.CLUSTER_CA
+  }
 }
